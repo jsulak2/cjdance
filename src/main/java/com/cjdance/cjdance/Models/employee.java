@@ -67,16 +67,16 @@ public class employee {
         return empemail;
     }
 
-    public void setempemail(String empfname) {
-        this.empid = empfname;
+    public void setempemail(String empemail) {
+        this.empemail = empemail;
     }
 
-    public String getempfname() {
-        return empfname;
+    public boolean getisinstructor() {
+        return isinstructor;
     }
 
-    public void setempfname(String empfname) {
-        this.empid = empfname;
+    public void setisinstructor(boolean isinstructor) {
+        this.isinstructor = isinstructor;
     }
 
 }
