@@ -44,6 +44,38 @@ public class employee {
     }
 
     public void setempfname(String empfname) {
+        this.empfname = empfname;
+    }
+
+    public String getemplname() {
+        return emplname;
+    }
+
+    public void setemplname(String emplname) {
+        this.emplname = emplname;
+    }
+
+    public String getempphone() {
+        return empphone;
+    }
+
+    public void setempphone(String empphone) {
+        this.empphone = empphone;
+    }
+
+    public String getempemail() {
+        return empemail;
+    }
+
+    public void setempemail(String empfname) {
+        this.empid = empfname;
+    }
+
+    public String getempfname() {
+        return empfname;
+    }
+
+    public void setempfname(String empfname) {
         this.empid = empfname;
     }
 

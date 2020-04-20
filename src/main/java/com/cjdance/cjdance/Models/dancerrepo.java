@@ -1,4 +1,4 @@
 package com.cjdance.cjdance.Models;
 
-public class dancerrepo {
+public interface dancerrepo {
 }

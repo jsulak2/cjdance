@@ -1,4 +1,4 @@
 package com.cjdance.cjdance.Models;
 
-public class billrepo {
+public interface billrepo {
 }
