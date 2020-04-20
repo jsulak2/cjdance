@@ -1,6 +1,6 @@
 package com.cjdance.cjdance.Models;
 
-import javax.persistence.;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "employee")

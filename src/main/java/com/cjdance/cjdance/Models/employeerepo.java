@@ -1,4 +1,6 @@
 package com.cjdance.cjdance.Models;
 
-public interface employeerepo {
+import org.springframework.data.repository.CrudRepository;
+
+public interface employeerepo extends CrudRepository<employee, String> {
 }

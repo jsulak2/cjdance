@@ -1,4 +1,6 @@
 package com.cjdance.cjdance.Models;
 
-public interface billrepo {
+import org.springframework.data.repository.CrudRepository;
+
+public interface billrepo extends CrudRepository<bill, String> {
 }

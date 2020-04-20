@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CJ Dance</title>
+    <title>SpringBoot</title>
     <style>
         table {
             font-family: arial, sans-serif;
@@ -11,15 +11,21 @@
             width: 100%;
         }
 
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 6px;
+            width: 200px;
+        }
+
         tr:nth-child(even) {
-            background-color: black;
+            background-color: #black;
         }
     </style>
 </head>
 
-<body style="background-color:grey;">
+<body>
 
-<h2 style="color: aliceblue">Hola Peeps</h2>
 
 </body>
 </html>
