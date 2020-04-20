@@ -43,8 +43,8 @@ public class employee {
         return empfname;
     }
 
-    public void setEmpfname(String empid) {
-        this.empid = empid;
+    public void setempfname(String empfname) {
+        this.empid = empfname;
     }
 
 }
