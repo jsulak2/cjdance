@@ -10,5 +10,9 @@ public class employee {
     private String id;
     @Column(name = "firstname")
     private String firstName;
+    @Column(name = "lastname")
+    private String lastName;
+    @Column(name = "isactive")
+    private boolean isActive;
 
 }
