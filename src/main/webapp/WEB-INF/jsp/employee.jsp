@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SpringBoot</title>
+    <title>CJ Dance</title>
     <style>
         table {
             font-family: arial, sans-serif;
@@ -11,21 +11,25 @@
             width: 100%;
         }
 
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 6px;
-            width: 200px;
-        }
-
         tr:nth-child(even) {
-            background-color: #black;
+            background-color: black;
         }
     </style>
 </head>
 
-<body>
 
+<body style="background-color:#323232;">
+
+<h1 style="color: lightcyan", align="center">CJ Dance Studio</h1>
+<br>
+
+<a href="/view/" style="color: aliceblue; border: deepskyblue; padding: 8px; padding-left: 25px", align="left">Employee Information</a>
+<br><br>
+<a href="/view/" style="color: aliceblue; border: deepskyblue; padding: 8px; padding-left: 25px", align="left">Class Information</a>
+<br><br>
+<a href="/view/" style="color: aliceblue; border: deepskyblue; padding: 8px; padding-left: 25px", align="left">Dancer Information</a>
+<br><br>
+<a href="/view/" style="color: aliceblue; border: deepskyblue; padding: 8px; padding-left: 25px", align="left">Bill Information</a>
 
 </body>
 </html>
