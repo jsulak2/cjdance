@@ -3,8 +3,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CJ Dance</title>
+    <title>CJ Dance: Employee</title>
     <style>
+        body {
+            background-color: #323232;
+        }
+        h4 {
+            text-align: left;
+            color: lawngreen;
+        }
+        h1 {
+            color: aliceblue;
+            text-align: center;
+        }
+        a {
+            color: lightskyblue;
+            padding: 8px;
+            padding-left: 25px;
+            alignment: left;
+        }
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
@@ -18,18 +35,11 @@
 </head>
 
 
-<body style="background-color:#323232;">
-
-<h1 style="color: lightcyan", align="center">CJ Dance Studio</h1>
+<body>
+<h4>CJ Dance Studio</h4>
+<h1>Employee</h1>
 <br>
 
-<a href="/view/" style="color: aliceblue; border: deepskyblue; padding: 8px; padding-left: 25px", align="left">Employee Information</a>
-<br><br>
-<a href="/view/" style="color: aliceblue; border: deepskyblue; padding: 8px; padding-left: 25px", align="left">Class Information</a>
-<br><br>
-<a href="/view/" style="color: aliceblue; border: deepskyblue; padding: 8px; padding-left: 25px", align="left">Dancer Information</a>
-<br><br>
-<a href="/view/" style="color: aliceblue; border: deepskyblue; padding: 8px; padding-left: 25px", align="left">Bill Information</a>
-
+<a href="/">Back</a>
 </body>
 </html>
