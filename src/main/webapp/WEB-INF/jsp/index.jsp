@@ -17,9 +17,14 @@
     </style>
 </head>
 
-<body style="background-color:grey;">
+<body style="background-color:#323232;">
 
-<h2 style="color: aliceblue">Hola Peeps</h2>
+<h1 style="color: lightcyan", align="center">CJ Dance Studio</h1>
+
+<a href="/view/" style="color: aliceblue; border: deepskyblue; border padding: 8px; padding-left: 25px", align="left">Employee Information</a>
+<a href="/view/" style="color: aliceblue; border: deepskyblue; padding: 8px; padding-left: 25px", align="left">Class Information</a>
+<a href="/view/" style="color: aliceblue; border: deepskyblue; padding: 8px; padding-left: 25px", align="left">Dancer Information</a>
+<a href="/view/" style="color: aliceblue; border: deepskyblue; padding: 8px; padding-left: 25px", align="left">Bill Information</a>
 
 </body>
 </html>
