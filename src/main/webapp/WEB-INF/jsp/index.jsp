@@ -12,8 +12,12 @@
             color: aliceblue;
             text-align: center;
         }
-        a {
+        h2 {
             color: lightcyan;
+            text-align: left;
+        }
+        a {
+            color: lightskyblue;
             padding: 8px;
             padding-left: 25px;
             alignment: left;
@@ -26,14 +30,17 @@
 
 <h1>CJ Dance Studio</h1>
 <br>
+<a href="/signup/">Class Sign Up</a>
+<br><br>
 
-<a href="/view/" >Employee Information</a>
+<h2>View</h2>
+<a href="/employee/">Employee Information</a>
 <br><br>
-<a href="/view/">Class Information</a>
+<a href="/classinfo/">Class Information</a>
 <br><br>
-<a href="/view/">Dancer Information</a>
+<a href="/dancer/">Dancer Information</a>
 <br><br>
-<a href="/view/">Bill Information</a>
+<a href="/bill/">Billing History</a>
 
 </body>
 </html>
