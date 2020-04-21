@@ -5,35 +5,27 @@
 <head>
     <title>CJ Dance</title>
     <style>
-        body {
-            background-color: #323232;
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
         }
-        h1 {
-            color: aliceblue;
-            text-align: center;
-        }
-        a {
-            color: lightcyan;
-            padding: 8px;
-            padding-left: 25px;
-            alignment: left;
+
+        tr:nth-child(even) {
+            background-color: black;
         }
     </style>
 </head>
 
+<body style="background-color:#323232;">
 
-<body>
+<h1 style="color: lightcyan", align="center">CJ Dance Studio</h1>
 
-<h1>CJ Dance Studio</h1>
+<a href="/view/" style="color: aliceblue; border: deepskyblue; border padding: 8px; padding-left: 25px", align="left">Employee Information</a>
 <br>
-
-<a href="/view/" >Employee Information</a>
-<br><br>
-<a href="/view/">Class Information</a>
-<br><br>
-<a href="/view/">Dancer Information</a>
-<br><br>
-<a href="/view/">Bill Information</a>
+<a href="/view/" style="color: aliceblue; border: deepskyblue; padding: 8px; padding-left: 25px", align="left">Class Information</a>
+<a href="/view/" style="color: aliceblue; border: deepskyblue; padding: 8px; padding-left: 25px", align="left">Dancer Information</a>
+<a href="/view/" style="color: aliceblue; border: deepskyblue; padding: 8px; padding-left: 25px", align="left">Bill Information</a>
 
 </body>
 </html>
