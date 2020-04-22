@@ -70,15 +70,17 @@
     <tr>
         <th>First Name</th>
         <th>Last Name</th>
-        <th>Action</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Instructor</th>
     </tr>
     <c:forEach var = "listitem" items = "${employeelist}">
         <tr>
             <td>${listitem.getempfname()}</td>
             <td>${listitem.getemplname()}</td>
-            <td>
-                I cant even right now
-            </td>
+            <td>${listitem.getempphone()}</td>
+            <td>${listitem.getempemail()}</td>
+            <td>${listitem.getisinstructor()}</td>
         </tr>
     </c:forEach>
 </table>
