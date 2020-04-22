@@ -36,7 +36,7 @@
 
 
 <body>
-<h4>CJ Dance Studio</h4>
+<h4>CJ Dance</h4>
 <h1>Class Information</h1>
 <br>
 
