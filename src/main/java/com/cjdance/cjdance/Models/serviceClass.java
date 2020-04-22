@@ -24,9 +24,9 @@ public class serviceClass
     @Autowired
     private billrepo br;
 
-    public List
+    /*public List
     fetchEmpBillDataInnerJoin()
     {
-        return fetchEmpBillDataInnerJoin()
-    }
+
+    }*/
 }
