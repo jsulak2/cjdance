@@ -30,8 +30,11 @@
             text-align: left;
         }
         input {
-            color: lightcyan;
+            color: black;
             text-align: left;
+        }
+        form {
+            color: lightcyan;
         }
 
     </style>
