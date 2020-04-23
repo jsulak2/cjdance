@@ -28,6 +28,9 @@ public class MainController {
         return mv;
     }
 
+    //  /signup/
+
+
     @RequestMapping( value = "/employee/", method = RequestMethod.GET)
     public ModelAndView viewEmployee(){
         ModelAndView mv = new ModelAndView("employee");
@@ -52,6 +55,12 @@ public class MainController {
     public ModelAndView viewBill(){
         ModelAndView mv = new ModelAndView("bill");
         mv.addObject("billlist", brepo.findAll());
+        return mv;
+    }
+    @RequestMapping( value = "/signup/", method = RequestMethod.GET)
+    public ModelAndView viewSignup(){
+        ModelAndView mv = new ModelAndView("signup");
+        //mv.addObject("signup", brepo.findAll());
         return mv;
     }
 
