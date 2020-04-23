@@ -8,10 +8,6 @@
         body {
             background-color: #323232;
         }
-        h4 {
-            text-align: left;
-            color: lawngreen;
-        }
         h1 {
             color: aliceblue;
             text-align: center;
@@ -29,7 +25,8 @@
             border-width: 2px;
             border-style: solid;
             border-color: #f5f5f5f5;
-            width: 100%;
+            width: 95%;
+            margin: auto auto 20px;
         }
 
         tr:nth-child(even) {
@@ -58,12 +55,29 @@
             border-color: #f5f5f5f5;
             border-collapse: collapse;
         }
+
+        <!-- Used the following website to learn how to style this button:
+             https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3 -->
+        .button {
+            text-align: center;
+            cursor: pointer;
+            color: black;
+            background-color: darkseagreen;
+        }
+        .button:hover {background-color: #3e8e41}
+        .button:active {
+            color: whitesmoke;
+            background-color: darkgreen;
+            transform: translateY(3px);
+        }
+
     </style>
 </head>
 
 
 <body>
-<h4>CJ Dance</h4>
+<br>
+<a style="font-family: 'Lucida Grande'; text-align: left; text-decoration: none; color: lawngreen;", href="/">CJ Dance</a>
 <h1>Class Information</h1>
 <br>
 
@@ -83,7 +97,7 @@
         </tr>
     </c:forEach>
 </table>
-
-<a href="/">Back</a>
+<br>
+<button class="button" style="animation: alternate;" onclick="window.location.href = '/';">Cancel</button>
 </body>
 </html>

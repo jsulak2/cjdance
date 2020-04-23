@@ -39,9 +39,12 @@
 
     </style>
 </head>
+
+
 <body>
-
-
+<br>
+<a style="font-family: 'Lucida Grande'; text-align: left; text-decoration: none; color: lawngreen;", href="/">CJ Dance</a>
+<h1>Sign Up</h1>
 
 <hr/>
 <form method="post" action="/signup/">
@@ -53,6 +56,10 @@
     <br><br>
     <input type="submit" value="Submit">
 </form>
+<br>
 
+<!-- Used the following website to learn how to style this button:
+https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html -->
+<button onclick="window.location.href = '/';">Cancel</button>
 </body>
 </html>
