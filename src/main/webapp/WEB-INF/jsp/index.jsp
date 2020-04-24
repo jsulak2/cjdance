@@ -22,6 +22,19 @@
             padding-left: 25px;
             alignment: left;
         }
+        .button {
+            margin-left: 30px;
+            text-align: center;
+            cursor: pointer;
+            color: black;
+            background-color: darkseagreen;
+        }
+        .button:hover {background-color: #3e8e41}
+        .button:active {
+            color: whitesmoke;
+            background-color: darkgreen;
+            transform: translateY(3px);
+        }
     </style>
 </head>
 

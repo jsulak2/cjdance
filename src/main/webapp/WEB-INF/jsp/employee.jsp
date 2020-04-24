@@ -54,6 +54,25 @@
             border-color: #f5f5f5f5;
             border-collapse: collapse;
         }
+
+        /*
+            Used the following website to learn how to add CSS Style this button:
+            https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3
+         */
+        .button {
+            margin-left: 30px;
+            text-align: center;
+            cursor: pointer;
+            color: black;
+            background-color: darkseagreen;
+        }
+        .button:hover {background-color: #3e8e41}
+        .button:active {
+            color: whitesmoke;
+            background-color: darkgreen;
+            transform: translateY(3px);
+        }
+
     </style>
 </head>
 
@@ -83,9 +102,10 @@
     </c:forEach>
 </table>
 
-<br>
+
 <!-- Used the following website to learn how to style this button:
 https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html -->
-<button onclick="window.location.href = '/';">Cancel</button>
+<br>
+<button class="button" style="animation: alternate;" onclick="window.location.href = '/';">Cancel</button>
 </body>
 </html>
