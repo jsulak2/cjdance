@@ -43,17 +43,22 @@
 
 <h1>CJ Dance Studio</h1>
 <br>
-<a href="/signup/">Class Sign Up</a>
+<!-- Used the following website to learn how to style this button:
+https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html -->
+<button class="button" style="animation: alternate;" onclick="window.location.href = '/signup/';">Class Sign Up</button>
 <br><br>
 
 <h2>View</h2>
-<a href="/employee/">Employee Information</a>
+<button class="button" style="animation: alternate;" onclick="window.location.href = '/employee/';">Employee Information</button>
+
 <br><br>
-<a href="/classinfo/">Class Information</a>
+<button class="button" style="animation: alternate;" onclick="window.location.href = '/classinfo/';">Class Information</button>
+
 <br><br>
-<a href="/dancer/">Dancer Information</a>
+<button class="button" style="animation: alternate;" onclick="window.location.href = '/dancer/';">Dancer Information</button>
+
 <br><br>
-<a href="/bill/">Billing History</a>
+<button class="button" style="animation: alternate;" onclick="window.location.href = '/bill/';">Billing History</button>
 
 </body>
 </html>
