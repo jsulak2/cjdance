@@ -47,6 +47,7 @@
 <br><br>
 
 <h2>View</h2>
+
 <a href="/employee/">Employee Information</a>
 <br><br>
 <a href="/classinfo/">Class Information</a>
