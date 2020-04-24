@@ -17,8 +17,7 @@
         }
         a {
             color: lightskyblue;
-            padding: 8px;
-            padding-left: 25px;
+            padding: 8px 8px 8px 25px;
             alignment: left;
         }
         hr {
@@ -36,7 +35,19 @@
         form {
             color: lightcyan;
         }
-
+        .button {
+            margin-left: 30px;
+            text-align: center;
+            cursor: pointer;
+            color: black;
+            background-color: darkseagreen;
+        }
+        .button:hover {background-color: #3e8e41}
+        .button:active {
+            color: whitesmoke;
+            background-color: darkgreen;
+            transform: translateY(3px);
+        }
     </style>
 </head>
 
@@ -60,6 +71,6 @@
 
 <!-- Used the following website to learn how to style this button:
 https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html -->
-<button onclick="window.location.href = '/';">Cancel</button>
+<button class="button" style="animation: alternate;" onclick="window.location.href = '/';">Cancel</button>
 </body>
 </html>

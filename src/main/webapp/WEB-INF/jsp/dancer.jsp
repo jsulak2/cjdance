@@ -14,8 +14,7 @@
         }
         a {
             color: lightskyblue;
-            padding: 8px;
-            padding-left: 25px;
+            padding: 8px 8px 8px 25px;
             alignment: left;
         }
         table {
@@ -55,6 +54,21 @@
             border-color: #f5f5f5f5;
             border-collapse: collapse;
         }
+
+        .button {
+            margin-left: 30px;
+            text-align: center;
+            cursor: pointer;
+            color: black;
+            background-color: darkseagreen;
+        }
+        .button:hover {background-color: #3e8e41}
+        .button:active {
+            color: whitesmoke;
+            background-color: darkgreen;
+            transform: translateY(3px);
+        }
+
     </style>
 </head>
 
@@ -85,6 +99,6 @@
 </table>
 
 <br>
-<button onclick="window.location.href = '/';">Cancel</button>
+<button class="button" style="animation: alternate;" onclick="window.location.href = '/';">Cancel</button>
 </body>
 </html>

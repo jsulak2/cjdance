@@ -14,8 +14,7 @@
         }
         a {
             color: lightskyblue;
-            padding: 8px;
-            padding-left: 25px;
+            padding: 8px 8px 8px 25px;
             alignment: left;
         }
         table {
@@ -56,9 +55,8 @@
             border-collapse: collapse;
         }
 
-        <!-- Used the following website to learn how to style this button:
-             https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3 -->
         .button {
+            margin-left: 30px;
             text-align: center;
             cursor: pointer;
             color: black;
