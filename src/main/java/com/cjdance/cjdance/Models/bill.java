@@ -1,9 +1,6 @@
 package com.cjdance.cjdance.Models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 
 @Entity
@@ -22,6 +19,13 @@ public class bill {
     private String billtotal;
     @Column(name = "billpaid")
     private boolean billpaid;
+
+    @Column(name = "commentLikes")
+    private String commentLikes;
+
+    @ManyToOne
+    @JoinColumn(name="commentId")
+    private classinfo classinf;
 
     public bill(){
     }

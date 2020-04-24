@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CJ Dance: Class</title>
+    <title>CJ Dance: Dancer</title>
     <style>
         body {
             background-color: #323232;
@@ -76,25 +76,28 @@
 <body>
 <br>
 <a style="font-family: 'Lucida Grande'; text-align: left; text-decoration: none; color: lawngreen;", href="/">CJ Dance</a>
-<h1>Class Information</h1>
+<h1>Dancer</h1>
 <br>
 
 <table>
     <tr>
-        <th>Class Name</th>
-        <th>Room Number</th>
-        <th>Day & Time</th>
-        <th>Instructor</th>
+        <th>Dancer Name</th>
+        <th>Bill Date</th>
+        <th>Number of Classes</th>
+        <th>Total</th>
+        <th>Status</th>
     </tr>
-    <c:forEach var = "listitem" items = "${classlist}">
+    <c:forEach var = "listitem" items = "${dancerlist; billlist}">
         <tr>
-            <td>${listitem.getclname()}</td>
-            <td>${listitem.getclroom()}</td>
-            <td>${listitem.getcldaytime()}</td>
-            <td>${listitem.getclinstructor()}</td>
+            <td>${listitem.getdanclname()}, ${listitem.getdancfname()}</td>
+            <td>${listitem.getbilldate()}</td>
+            <td>${listitem.getbillnumclasses()}</td>
+            <td>${listitem.getbilltotal()}</td>
+            <td>${listitem.getbillpaid()}</td>
         </tr>
     </c:forEach>
 </table>
+
 <br>
 <button class="button" style="animation: alternate;" onclick="window.location.href = '/';">Cancel</button>
 </body>
