@@ -84,14 +84,12 @@
         <th>Class Name</th>
         <th>Room Number</th>
         <th>Day & Time</th>
-        <th>Instructor</th>
     </tr>
     <c:forEach var = "listitem" items = "${classlist}">
         <tr>
             <td>${listitem.getclname()}</td>
             <td>${listitem.getclroom()}</td>
             <td>${listitem.getcldaytime()}</td>
-            <td>${listitem.getclinstructor()}</td>
         </tr>
     </c:forEach>
 </table>
