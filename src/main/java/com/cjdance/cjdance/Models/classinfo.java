@@ -17,18 +17,17 @@ public class classinfo {
     private String clroom;
     @Column(name = "cldaytime")
     private String cldaytime;
-    @Column(name = "clinstructor")
-    private String clinstructor;
+
 
     public classinfo(){
     }
 
-    public classinfo(String clid, String clname, String clroom, String cldaytime, String clinstructor){
+    public classinfo(String clid, String clname, String clroom, String cldaytime){
         this.clid = clid;
         this.clname = clname;
         this.clroom = clroom;
         this.cldaytime = cldaytime;
-        this.clinstructor = clinstructor;
+
     }
 
     public String clid() {
@@ -63,12 +62,6 @@ public class classinfo {
         this.cldaytime = cldaytime;
     }
 
-    public String getclinstructor() {
-        return clinstructor;
-    }
 
-    public void setclinstructor(String clinstructor) {
-        this.clinstructor = clinstructor;
-    }
 
 }
