@@ -66,6 +66,16 @@ public class MainController {
 
        return mv;
     }
+
+    @RequestMapping( value = "/editemployee/{id}", method = RequestMethod.GET)
+    public ModelAndView edit(@PathVariable("id") String id){
+        ModelAndView mv = new ModelAndView("editemployee");
+        Optional<employee> person = emprepo.findById(id);
+        employee personToMap = person.get();
+        mv.addObject("selectedItem", personToMap);
+        return mv;
+    }
+
     @RequestMapping(value = "/saveemp/", method = RequestMethod.POST)
     public ModelAndView save(@RequestParam("empid") String empid, @RequestParam("empfname") String empfname, @RequestParam("emplname") String emplname){
         ModelAndView mv = new ModelAndView("/employee/");
