@@ -59,11 +59,19 @@ public class MainController {
         mv.addObject("billlist", brepo.findAll());
         return mv;
     }
+
     @RequestMapping( value = "/signup", method = RequestMethod.GET)
     public ModelAndView viewSignup(){
         ModelAndView mv = new ModelAndView("signup");
         //mv.addObject("signup", brepo.findAll());
 
+        return mv;
+    }
+
+    @RequestMapping( value = "/view", method = RequestMethod.GET)
+    public ModelAndView viewBillView(){
+        ModelAndView mv = new ModelAndView("view");
+        mv.addObject("billlist", brepo.findAll());
         return mv;
     }
 
