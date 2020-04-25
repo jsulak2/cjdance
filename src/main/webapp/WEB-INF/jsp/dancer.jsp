@@ -106,6 +106,23 @@
         </tr>
     </c:forEach>
 </table>
+<br>
+<form method="post" action="/savedancer/">
+    <input type="hidden" name="dancid" value="${selectedItem.getdancid()}">
+    <br>First Name:<br>
+    <input type="text" name="dancfname" value="${selectedItem.getdancfname()}">
+    <br>Last name:<br>
+    <input type="text" name="danclname" value="${selectedItem.getdanclname()}">
+    <br>Date of Birth:<br>
+    <input type="text" name="dancdob" value="${selectedItem.getdancdob()}">
+    <br>Phone:<br>
+    <input type="text" name="dancphone" value="${selectedItem.getdancphone()}">
+    <br>Email:<br>
+    <input type="text" name="dancemail" value="${selectedItem.getdancemail()}">
+
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
 
 <br>
 <button class="button" style="animation: alternate;" onclick="window.location.href = '/';">Cancel</button>
