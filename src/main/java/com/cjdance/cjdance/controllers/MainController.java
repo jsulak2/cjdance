@@ -76,8 +76,10 @@ public class MainController {
         return mv;
     }
 
-    @RequestMapping(value = "/saveemp/", method = RequestMethod.POST)
-    public ModelAndView save(@RequestParam("empid") String empid, @RequestParam("empfname") String empfname, @RequestParam("emplname") String emplname){
+    @RequestMapping(value = "/saveemp", method = RequestMethod.POST)
+    public ModelAndView save(@RequestParam("empid") String empid, @RequestParam("empfname") String empfname,
+                             @RequestParam("emplname") String emplname, @RequestParam("empphone") String empphone,
+                             @RequestParam("empemail") String empemail){
         ModelAndView mv = new ModelAndView("/employee");
         employee personToSave ;
         if(!empid.isEmpty())
@@ -92,6 +94,8 @@ public class MainController {
         }
         personToSave.setempfname(empfname);
         personToSave.setemplname(emplname);
+        personToSave.setempphone(empphone);
+        personToSave.setempemail(empemail);
         emprepo.save(personToSave);
         mv.addObject("employeelist", emprepo.findAll());
         return mv;
