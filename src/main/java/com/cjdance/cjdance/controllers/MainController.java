@@ -212,8 +212,40 @@ public class MainController {
         drepo.deleteById(id);
         return mv;
     }
+    @RequestMapping( value = "/deleteview/{id}", method = RequestMethod.GET)
+    public ModelAndView deleteview(@PathVariable("id") String id){
+        ModelAndView mv = new ModelAndView("redirect:/view");
+        brepo.deleteById(id);
+        return mv;
+    }
 
+    //save for bill
 
+    @RequestMapping(value = "/savebill", method = RequestMethod.POST)
+    public ModelAndView saveBill(@RequestParam("billid") String billid, @RequestParam("billempid") String billempid,
+                                   @RequestParam("billclassid") String billclassid, @RequestParam("billdancerid") String billdancerid,
+                                   @RequestParam("billdate") String billdate,@RequestParam("billtotal") String billtotal){
+        ModelAndView mv = new ModelAndView("/bill");
+        bill personToSave ;
+        if(!billid.isEmpty())
+        {
+            Optional<bill> users = brepo.findById(billid);
+            personToSave = users.get();
+        }
+        else
+        {
+            personToSave = new bill();
+            personToSave.setbillid(UUID.randomUUID().toString());
+        }
+        personToSave.setbillempid(billempid);
+        personToSave.setbillclassid(billclassid);
+        personToSave.setbilldancerid(billdancerid);
+        personToSave.setbilldate(billdate);
+        personToSave.setbilltotal(billtotal);
+        brepo.save(personToSave);
+        mv.addObject("billlist", brepo.findAll());
+        return mv;
+    }
 
 
 

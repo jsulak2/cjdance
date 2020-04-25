@@ -24,10 +24,6 @@ public class bill {
     @Column(name = "billtotal")
     private String billtotal = "$45";
 
-
-
-
-
    /*
 
     @OneToOne(mappedBy = "danceid")
@@ -100,7 +96,7 @@ public class bill {
     public void setbilltotal(String billtotal) {
         this.billtotal = billtotal;
     }
-
+/*
     public void setAll(String id, String emp, String cls, String dncr){
         employeerepo e;
         //e.findAll();
@@ -113,7 +109,7 @@ public class bill {
     }
 
 
-/*
+
     public dancer getDncr() {
         return dncr;
     }

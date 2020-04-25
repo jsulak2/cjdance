@@ -86,6 +86,7 @@
         <th>Dancer Name</th>
         <th>Bill Date</th>
         <th>Total</th>
+        <th>Action</th>
     </tr>
     <c:forEach var = "listitem" items = "${billlist}">
         <tr>
@@ -94,6 +95,9 @@
             <td>${listitem.getbilldancerid()}</td>
             <td>${listitem.getbilldate()}</td>
             <td>${listitem.getbilltotal()}</td>
+            <td>
+                <a href="/deleteview/${listitem.getbillid()}">Delete</a>
+            </td>
         </tr>
     </c:forEach>
 </table>

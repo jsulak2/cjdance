@@ -83,18 +83,18 @@
 <h1>Billing</h1>
 <br>
 
-<form method="post" action="/savebillinfo/">
-    <input type="hidden" name="billid">
-    <br>Employee ID:<br>
-    <input type="text" name="billempid">
-    <br>Class ID:<br>
-    <input type="text" name="billclassid">
-    <br>Dancer ID:<br>
-    <input type="text" name="billdancerid">
+<form method="post" action="/savebill/">
+    <input type="hidden" name="billid" value="${selectedItem.getbillid()}">
+    <br>Employee:<br>
+    <input type="text" name="billempid" value="${selectedItem.getbillempid()}">
+    <br>Class:<br>
+    <input type="text" name="billclassid" value="${selectedItem.getbillclassid()}">
+    <br>Dancer:<br>
+    <input type="text" name="billdancerid" value="${selectedItem.getbilldancerid()}">
     <br>Date:<br>
-    <input type="text" name="billdate">
+    <input type="text" name="billdate" value="${selectedItem.getbilldate()}">
     <br>Total:<br>
-    <input type="text" name="billdate" value="$45">
+    <input type="text" name="billtotal" value="$45">
     <br><br>
     <input type="submit" value="Submit" style="background-color: darkseagreen">
 </form>
