@@ -37,13 +37,13 @@
 
 <body>
 <br>
-<a style="font-family: 'Lucida Grande'; text-align: left; text-decoration: none; color: lawngreen;", href="/">CJ Dance</a>
+
 <h1>Edit Employee</h1>
 <br>
 
 
 <hr/>
-<form method="post" action="/saveemp/">
+<form method="post" action="/save">
     <input type="hidden" name="empid" value="${selectedItem.getempid()}">
     <br>First Name:<br>
     <input type="text" name="empfname" value="${selectedItem.getempfname()}">
