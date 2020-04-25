@@ -85,19 +85,19 @@
 
 <table>
     <tr>
+        <th>Employee Name</th>
+        <th>Class Name</th>
         <th>Dancer Name</th>
         <th>Bill Date</th>
-        <th>Number of Classes</th>
         <th>Total</th>
-        <th>Status</th>
     </tr>
     <c:forEach var = "listitem" items = "${billlist}">
         <tr>
-            <td>${listitem.getbilldancer()}</td>
+            <td>${listitem.getbillempid()}</td>
+            <td>${listitem.getbillclassid()}</td>
+            <td>${listitem.getbilldancerid()}</td>
             <td>${listitem.getbilldate()}</td>
-            <td>${listitem.getbillnumclasses()}</td>
             <td>${listitem.getbilltotal()}</td>
-            <td>${listitem.getbillpaid()}</td>
         </tr>
     </c:forEach>
 </table>

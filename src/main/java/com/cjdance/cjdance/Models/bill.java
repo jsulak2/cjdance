@@ -19,7 +19,7 @@ public class bill {
     @Column(name = "billdate")
     private String billdate;
     @Column(name = "billtotal")
-    private String billtotal;
+    private String billtotal = "$45";
 
 
    /*
