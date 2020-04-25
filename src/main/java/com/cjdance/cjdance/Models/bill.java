@@ -1,5 +1,7 @@
 package com.cjdance.cjdance.Models;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.persistence.*;
 import java.awt.*;
 
@@ -7,6 +9,7 @@ import java.awt.*;
 @Entity
 @Table(name = "bill")
 public class bill {
+
     @Id
     @Column(name = "billid")
     private String billid;
@@ -20,6 +23,9 @@ public class bill {
     private String billdate;
     @Column(name = "billtotal")
     private String billtotal = "$45";
+
+
+
 
 
    /*
@@ -66,6 +72,7 @@ public class bill {
     }
 
     public void setbillclassid(String billclassid) {
+
         this.billclassid = billclassid;
     }
 
@@ -94,6 +101,16 @@ public class bill {
         this.billtotal = billtotal;
     }
 
+    public void setAll(String id, String emp, String cls, String dncr){
+        employeerepo e;
+        //e.findAll();
+
+
+
+
+        String str = "";
+        //str.contains();
+    }
 
 
 /*

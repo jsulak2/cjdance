@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.awt.*;
+import java.util.Optional;
 
 
 /**
@@ -24,9 +25,14 @@ public class serviceClass
     @Autowired
     private billrepo br;
 
-    /*public List
-    fetchEmpBillDataInnerJoin()
-    {
+    public String getempname(String id){
+        String empname = "";
+        employee person;
+        Optional<employee> users = er.findById(id);
+        person = users.get();
+        empname = person.getempfname() + " " + person.getemplname();
 
-    }*/
+        return empname;
+    }
+
 }

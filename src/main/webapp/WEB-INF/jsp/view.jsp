@@ -76,28 +76,27 @@
 <body>
 <br>
 <a style="font-family: 'Lucida Grande'; text-align: left; text-decoration: none; color: lawngreen;", href="/">CJ Dance</a>
-<h1>Dancer</h1>
+<h1>Bill Data</h1>
 <br>
 
 <table>
     <tr>
+        <th>Employee Name</th>
+        <th>Class Name</th>
         <th>Dancer Name</th>
         <th>Bill Date</th>
-        <th>Number of Classes</th>
         <th>Total</th>
-        <th>Status</th>
     </tr>
-    <c:forEach var = "listitem" items = "${dancerlist; billlist}">
+    <c:forEach var = "listitem" items = "${billlist}">
         <tr>
-            <td>${listitem.getdanclname()}, ${listitem.getdancfname()}</td>
+            <td>${listitem.getbillempid()}</td>
+            <td>${listitem.getbillclassid()}</td>
+            <td>${listitem.getbilldancerid()}</td>
             <td>${listitem.getbilldate()}</td>
-            <td>${listitem.getbillnumclasses()}</td>
             <td>${listitem.getbilltotal()}</td>
-            <td>${listitem.getbillpaid()}</td>
         </tr>
     </c:forEach>
 </table>
-
 <br>
 <button class="button" style="animation: alternate;" onclick="window.location.href = '/';">Cancel</button>
 </body>

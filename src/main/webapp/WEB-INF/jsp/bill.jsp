@@ -24,7 +24,7 @@
             border-width: 2px;
             border-style: solid;
             border-color: #f5f5f5f5;
-            width: 95%;
+            width: 75%;
             margin: auto auto 20px;
         }
 
@@ -81,6 +81,51 @@
 <br>
 <a style="font-family: 'Lucida Grande'; text-align: left; text-decoration: none; color: lawngreen;", href="/">CJ Dance</a>
 <h1>Billing</h1>
+<br>
+
+<table> <!--EMPLOYEE TABLE-->
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Action</th>
+    </tr>
+    <c:forEach var = "listitem" items = "${employeelist}">
+        <tr>
+            <td>${listitem.getempfname()}</td>
+            <td>${listitem.getemplname()}</td>
+            <td>${listitem.getempphone()}</td>
+            <td>${listitem.getempemail()}</td>
+            <td>
+                <a href="/editemployee/${listitem.getempid()}">Edit</a>
+                <a href="/deleteemp/${listitem.getempid()}">Delete</a>
+
+            </td>
+        </tr>
+    </c:forEach>
+</table>
+
+
+
+
+
+
+<form method="post" action="/savebillinfo/">
+    <input type="hidden" name="billid">
+    <br>Employee ID:<br>
+    <input type="text" name="billempid">
+    <br>Class ID:<br>
+    <input type="text" name="billclassid">
+    <br>Dancer ID:<br>
+    <input type="text" name="billdancerid">
+    <br>Date:<br>
+    <input type="text" name="billdate">
+    <br>Total:<br>
+    <input type="text" name="billdate" value="$45">
+    <br><br>
+    <input type="submit" value="Submit" style="background-color: darkseagreen">
+</form>
 <br>
 
 <table>
