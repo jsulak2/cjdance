@@ -105,7 +105,16 @@
         </tr>
     </c:forEach>
 </table>
-
+<br>
+<form method="post" action="/saveemp/">
+    <input type="hidden" name="empid" value="${selectedItem.getempid()}">
+    <br>First Name:<br>
+    <input type="text" name="empfname" value="${selectedItem.getempfname()}">
+    <br>Last name:<br>
+    <input type="text" name="emplname" value="${selectedItem.getemplname()}">
+    <br><br>
+    <input type="submit" value="Submit" style="background-color: darkseagreen">
+</form>
 
 <!-- Used the following website to learn how to style this button:
 https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html -->

@@ -104,6 +104,18 @@
     </c:forEach>
 </table>
 <br>
+<form method="post" action="/saveclass/">
+    <input type="hidden" name="clid" value="${selectedItem.getclid()}">
+    <br>Class Name:<br>
+    <input type="text" name="clname" value="${selectedItem.getclname()}">
+    <br>Classroom:<br>
+    <input type="text" name="clroom" value="${selectedItem.getclroom()}">
+    <br>Day & Time:<br>
+    <input type="text" name="cldaytime" value="${selectedItem.getcldaytime()}">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+<br>
 <button class="button" style="animation: alternate;" onclick="window.location.href = '/';">Cancel</button>
 </body>
 </html>
