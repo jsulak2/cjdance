@@ -30,7 +30,7 @@ public class classinfo {
 
     }
 
-    public String clid() {
+    public String getclid() {
         return clid;
     }
 

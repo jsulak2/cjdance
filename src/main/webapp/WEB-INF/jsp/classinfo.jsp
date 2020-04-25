@@ -84,12 +84,17 @@
         <th>Class Name</th>
         <th>Room Number</th>
         <th>Day & Time</th>
+        <th>Action</th>
+
+
     </tr>
     <c:forEach var = "listitem" items = "${classlist}">
         <tr>
             <td>${listitem.getclname()}</td>
             <td>${listitem.getclroom()}</td>
             <td>${listitem.getcldaytime()}</td>
+            <a href="/editclassinfo/${listitem.getclid()}">Edit</a>
+
         </tr>
     </c:forEach>
 </table>
