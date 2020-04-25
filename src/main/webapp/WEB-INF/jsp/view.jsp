@@ -102,6 +102,15 @@
     </c:forEach>
 </table>
 <br>
+
+<br>
+<p style="color:#eeeeee; margin-left: 30px ">Search</p>
+<input type="text" style="padding-left: 30px; margin-left: 30px" name="search">
+<br><br>
+<button class="button" style="animation: alternate; width: 58px ">Go</button>
+<br>
+
+<br>
 <button class="button" style="animation: alternate;" onclick="window.location.href = '/';">Cancel</button>
 </body>
 </html>
