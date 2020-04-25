@@ -14,7 +14,7 @@
         }
         a {
             color: lightskyblue;
-            padding: 8px 8px 8px 25px;
+            padding: 8px 8px 8px 30px;
             alignment: left;
         }
         table {

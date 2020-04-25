@@ -14,7 +14,7 @@
         }
         a {
             color: lightskyblue;
-            padding: 8px 8px 8px 25px;
+            padding: 8px 8px 8px 30px;
             alignment: left;
         }
         form {
@@ -42,6 +42,7 @@
 
 <body>
 <br>
+<a style="font-family: 'Lucida Grande'; text-align: left; text-decoration: none; color: lawngreen;", href="/">CJ Dance</a>
 
 <h1>Edit Employee</h1>
 <br>
