@@ -54,6 +54,10 @@
             border-color: #f5f5f5f5;
             border-collapse: collapse;
         }
+        form {
+            color: aliceblue;
+            margin-left: 30px;
+        }
 
         .button {
             margin-left: 30px;

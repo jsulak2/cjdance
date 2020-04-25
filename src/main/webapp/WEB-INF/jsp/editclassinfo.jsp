@@ -61,6 +61,6 @@
 <br>
 
 <br>
-<button class="button" style="animation: alternate;" onclick="window.location.href = '/classinfo/';">Cancel</button>
+<button class="button" style="animation: alternate;" onclick="window.location.href = '/classinfo';">Cancel</button>
 </body>
 </html>

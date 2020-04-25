@@ -54,6 +54,10 @@
             border-color: #f5f5f5f5;
             border-collapse: collapse;
         }
+        form {
+            color: aliceblue;
+            margin-left: 30px;
+        }
 
         .button {
             margin-left: 30px;
@@ -121,7 +125,7 @@
     <input type="text" name="dancemail" value="${selectedItem.getdancemail()}">
 
     <br><br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" style="background-color: darkseagreen">
 </form>
 
 <br>

@@ -54,6 +54,10 @@
             border-color: #f5f5f5f5;
             border-collapse: collapse;
         }
+        form {
+            color: aliceblue;
+            margin-left: 30px;
+        }
 
         .button {
             margin-left: 30px;
@@ -113,7 +117,7 @@
     <br>Day & Time:<br>
     <input type="text" name="cldaytime" value="${selectedItem.getcldaytime()}">
     <br><br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" style="background-color: darkseagreen">
 </form>
 <br>
 <button class="button" style="animation: alternate;" onclick="window.location.href = '/';">Cancel</button>

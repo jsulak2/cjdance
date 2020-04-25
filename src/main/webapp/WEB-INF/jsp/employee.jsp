@@ -54,6 +54,10 @@
             border-color: #f5f5f5f5;
             border-collapse: collapse;
         }
+        form {
+            color: aliceblue;
+            margin-left: 30px;
+        }
 
         /*
             Used the following website to learn how to add CSS Style this button:

@@ -17,6 +17,10 @@
             padding: 8px 8px 8px 25px;
             alignment: left;
         }
+        form {
+            color: aliceblue;
+            margin-left: 30px;
+        }
         .button {
             margin-left: 30px;
             text-align: center;
@@ -57,11 +61,11 @@
     <input type="text" name="dancemail" value="${selectedItem.getdancemail()}">
 
     <br><br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" style="background-color: darkseagreen">
 </form>
 <br>
 
 <br>
-<button class="button" style="animation: alternate;" onclick="window.location.href = '/dancer/';">Cancel</button>
+<button class="button" style="animation: alternate;" onclick="window.location.href = '/dancer';">Cancel</button>
 </body>
 </html>

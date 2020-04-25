@@ -33,7 +33,7 @@ public class MainController {
     //  /signup/
 
 
-    @RequestMapping( value = "/employee/", method = RequestMethod.GET)
+    @RequestMapping( value = "/employee", method = RequestMethod.GET)
     public ModelAndView viewEmployee(){
         ModelAndView mv = new ModelAndView("employee");
      /*   Optional<Employees> person = employeesRepo.findById(id);
@@ -41,25 +41,25 @@ public class MainController {
         mv.addObject("employeelist", emprepo.findAll());
         return mv;
     }
-    @RequestMapping( value = "/classinfo/", method = RequestMethod.GET)
+    @RequestMapping( value = "/classinfo", method = RequestMethod.GET)
     public ModelAndView viewClass(){
         ModelAndView mv = new ModelAndView("classinfo");
         mv.addObject("classlist", crepo.findAll());
         return mv;
     }
-    @RequestMapping( value = "/dancer/", method = RequestMethod.GET)
+    @RequestMapping( value = "/dancer", method = RequestMethod.GET)
     public ModelAndView viewDancer(){
         ModelAndView mv = new ModelAndView("dancer");
         mv.addObject("dancerlist", drepo.findAll());
         return mv;
     }
-    @RequestMapping( value = "/bill/", method = RequestMethod.GET)
+    @RequestMapping( value = "/bill", method = RequestMethod.GET)
     public ModelAndView viewBill(){
         ModelAndView mv = new ModelAndView("bill");
         mv.addObject("billlist", brepo.findAll());
         return mv;
     }
-    @RequestMapping( value = "/signup/", method = RequestMethod.GET)
+    @RequestMapping( value = "/signup", method = RequestMethod.GET)
     public ModelAndView viewSignup(){
         ModelAndView mv = new ModelAndView("signup");
         //mv.addObject("signup", brepo.findAll());
@@ -69,7 +69,7 @@ public class MainController {
 
     @RequestMapping( value = "/editemployee/{id}", method = RequestMethod.GET)
     public ModelAndView editEmployee(@PathVariable("id") String id){
-        ModelAndView mv = new ModelAndView("editemployee");
+        ModelAndView mv = new ModelAndView("/editemployee");
         Optional<employee> person = emprepo.findById(id);
         employee personToMap = person.get();
         mv.addObject("selectedItem", personToMap);
@@ -78,7 +78,7 @@ public class MainController {
 
     @RequestMapping(value = "/saveemp/", method = RequestMethod.POST)
     public ModelAndView save(@RequestParam("empid") String empid, @RequestParam("empfname") String empfname, @RequestParam("emplname") String emplname){
-        ModelAndView mv = new ModelAndView("/employee/");
+        ModelAndView mv = new ModelAndView("/employee");
         employee personToSave ;
         if(!empid.isEmpty())
         {
@@ -99,7 +99,7 @@ public class MainController {
 
     @RequestMapping( value = "/editdancer/{id}", method = RequestMethod.GET)
     public ModelAndView editDancer(@PathVariable("id") String id){
-        ModelAndView mv = new ModelAndView("editdancer");
+        ModelAndView mv = new ModelAndView("/dancer");
         Optional<dancer> person = drepo.findById(id);
         dancer personToMap = person.get();
         mv.addObject("selectedItem", personToMap);
@@ -108,14 +108,14 @@ public class MainController {
 
     @RequestMapping( value = "/deleteemp/{id}", method = RequestMethod.GET)
     public ModelAndView deleteEmployee(@PathVariable("id") String id){
-        ModelAndView mv = new ModelAndView("redirect:/");
+        ModelAndView mv = new ModelAndView("redirect:/employee");
         emprepo.deleteById(id);
         return mv;
     }
 
     @RequestMapping( value = "/deleteclass/{id}", method = RequestMethod.GET)
     public ModelAndView deleteClass(@PathVariable("id") String id){
-        ModelAndView mv = new ModelAndView("redirect:/classinfo/");
+        ModelAndView mv = new ModelAndView("redirect:/classinfo");
         crepo.deleteById(id);
         return mv;
     }
