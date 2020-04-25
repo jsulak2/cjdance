@@ -44,10 +44,7 @@
 <br>
 <!-- Used the following website to learn how to style this button:
 https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html -->
-<button class="button" style="animation: alternate;" onclick="window.location.href = '/signup/';">Class Sign Up</button>
-<br><br>
 
-<h2>View</h2>
 <button class="button" style="animation: alternate;" onclick="window.location.href = '/employee/';">Employee Information</button>
 
 <br><br>
@@ -57,7 +54,7 @@ https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like
 <button class="button" style="animation: alternate;" onclick="window.location.href = '/dancer/';">Dancer Information</button>
 
 <br><br>
-<button class="button" style="animation: alternate;" onclick="window.location.href = '/bill/';">Billing History</button>
+<button class="button" style="animation: alternate;" onclick="window.location.href = '/bill/';">New Transaction</button>
 
 
 <br><br>
