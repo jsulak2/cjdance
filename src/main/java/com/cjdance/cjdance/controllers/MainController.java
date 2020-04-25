@@ -159,7 +159,7 @@ public class MainController {
     }
 
     @RequestMapping(value = "/savedancer", method = RequestMethod.POST)
-    public ModelAndView save(@RequestParam("dancid") String dancid, @RequestParam("dancfname") String dancfname,
+    public ModelAndView saveDancer(@RequestParam("dancid") String dancid, @RequestParam("dancfname") String dancfname,
                              @RequestParam("danclname") String danclname, @RequestParam("dancdob") String dancdob,
                              @RequestParam("dancphone") String dancphone,@RequestParam("dancemail") String dancemail){
         ModelAndView mv = new ModelAndView("/dancer");
@@ -176,6 +176,7 @@ public class MainController {
         }
         personToSave.setdancfname(dancfname);
         personToSave.setdanclname(danclname);
+        personToSave.setdancphone(dancphone);
         personToSave.setdancdob(dancdob);
         personToSave.setdancemail(dancemail);
         drepo.save(personToSave);
