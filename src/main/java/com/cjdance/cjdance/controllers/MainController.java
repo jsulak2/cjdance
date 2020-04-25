@@ -111,14 +111,22 @@ public class MainController {
 
 
     //Class CRUD
-    @RequestMapping( value = "/editclass/{id}", method = RequestMethod.GET)
+    @RequestMapping( value = "/editclassinfo/{id}", method = RequestMethod.GET)
+    public ModelAndView editClass(@PathVariable("id") String id){
+        ModelAndView mv = new ModelAndView("/classinfo");
+        Optional<classinfo> person = crepo.findById(id);
+        classinfo personToMap = person.get();
+        mv.addObject("selectedItem", personToMap);
+        return mv;
+    }
+    /*@RequestMapping( value = "/editclass/{id}", method = RequestMethod.GET)
     public ModelAndView editClass(@PathVariable("id") String id){
         ModelAndView mv = new ModelAndView("/editclass");
         Optional<classinfo> cls = crepo.findById(id);
         classinfo classToMap = cls.get();
         mv.addObject("selectedItem", classToMap);
         return mv;
-    }
+    }*/
     @RequestMapping(value = "/saveclass", method = RequestMethod.POST)
     public ModelAndView saveClass(@RequestParam("clid") String clid, @RequestParam("clname") String clname,
                              @RequestParam("clroom") String clroom, @RequestParam("cldaytime") String cldaytime){
