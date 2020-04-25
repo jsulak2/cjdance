@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Optional;
+import java.util.UUID;
 
 @Controller
 public class MainController {
@@ -64,6 +65,26 @@ public class MainController {
         //mv.addObject("signup", brepo.findAll());
 
        return mv;
+    }
+    @RequestMapping(value = "/saveemp/", method = RequestMethod.POST)
+    public ModelAndView save(@RequestParam("empid") String empid, @RequestParam("empfname") String empfname, @RequestParam("emplname") String emplname){
+        ModelAndView mv = new ModelAndView("/employee/");
+        employee personToSave ;
+        if(!empid.isEmpty())
+        {
+            Optional<employee> users = emprepo.findById(empid);
+            personToSave = users.get();
+        }
+        else
+        {
+            personToSave = new employee();
+            personToSave.setempid(UUID.randomUUID().toString());
+        }
+        personToSave.setempfname(empfname);
+        personToSave.setemplname(emplname);
+        emprepo.save(personToSave);
+        mv.addObject("employeelist", emprepo.findAll());
+        return mv;
     }
 
 }

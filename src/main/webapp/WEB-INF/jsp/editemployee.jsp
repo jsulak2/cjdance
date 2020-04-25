@@ -17,44 +17,6 @@
             padding: 8px 8px 8px 25px;
             alignment: left;
         }
-        table {
-            color: #eeeeee;
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            border-width: 2px;
-            border-style: solid;
-            border-color: #f5f5f5f5;
-            width: 95%;
-            margin: auto auto 20px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #555555;
-            border-width: 1px;
-            border-style: solid;
-            border-color: #f5f5f5f5;
-            border-collapse: collapse;
-        }
-        tr:nth-child(odd) {
-            background-color: #333333;
-            border-width: 1px;
-            border-style: solid;
-            border-color: #f5f5f5f5;
-            border-collapse: collapse;
-        }
-        td {
-            border-width: 1px;
-            border-style: solid;
-            border-color: #f5f5f5f5;
-            border-collapse: collapse;
-        }
-        th {
-            border-width: 1px;
-            border-style: solid;
-            border-color: #f5f5f5f5;
-            border-collapse: collapse;
-        }
-
         .button {
             margin-left: 30px;
             text-align: center;
@@ -81,18 +43,18 @@
 
 
 <hr/>
-<form method="post" action="/save">
-    <input type="hidden" name="id" value="${selectedItem.getId()}">
+<form method="post" action="/saveemp/">
+    <input type="hidden" name="empid" value="${selectedItem.getempid()}">
     <br>First Name:<br>
-    <input type="text" name="firstname" value="${selectedItem.getFirstName()}">
+    <input type="text" name="empfname" value="${selectedItem.getempfname()}">
     <br>Last name:<br>
-    <input type="text" name="lastname" value="${selectedItem.getLastName()}">
+    <input type="text" name="emplname" value="${selectedItem.getemplname()}">
     <br><br>
     <input type="submit" value="Submit">
 </form>
 <br>
 
 <br>
-<button class="button" style="animation: alternate;" onclick="window.location.href = 'redirect:/employee/';">Cancel</button>
+<button class="button" style="animation: alternate;" onclick="window.location.href = '/employee/';">Cancel</button>
 </body>
 </html>
