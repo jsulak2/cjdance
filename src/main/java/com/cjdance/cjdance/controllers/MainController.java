@@ -70,7 +70,7 @@ public class MainController {
     //Employee CRUD
     @RequestMapping( value = "/editemployee/{id}", method = RequestMethod.GET)
     public ModelAndView editEmployee(@PathVariable("id") String id){
-        ModelAndView mv = new ModelAndView("/employee");
+        ModelAndView mv = new ModelAndView("/editemployee");
         Optional<employee> person = emprepo.findById(id);
         employee personToMap = person.get();
         mv.addObject("selectedItem", personToMap);
@@ -113,7 +113,7 @@ public class MainController {
     //Class CRUD
     @RequestMapping( value = "/editclassinfo/{id}", method = RequestMethod.GET)
     public ModelAndView editClass(@PathVariable("id") String id){
-        ModelAndView mv = new ModelAndView("/classinfo");
+        ModelAndView mv = new ModelAndView("/editclassinfo");
         Optional<classinfo> person = crepo.findById(id);
         classinfo personToMap = person.get();
         mv.addObject("selectedItem", personToMap);
@@ -162,7 +162,7 @@ public class MainController {
     //Dancer CRUD
     @RequestMapping( value = "/editdancer/{id}", method = RequestMethod.GET)
     public ModelAndView editDancer(@PathVariable("id") String id){
-        ModelAndView mv = new ModelAndView("/dancer");
+        ModelAndView mv = new ModelAndView("/editdancer");
         Optional<dancer> person = drepo.findById(id);
         dancer personToMap = person.get();
         mv.addObject("selectedItem", personToMap);
