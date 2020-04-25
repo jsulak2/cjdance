@@ -102,7 +102,7 @@
             <td>${listitem.getdancemail()}</td>
             <td>
                 <a href="/editdancer/${listitem.getdancid()}">Edit</a>
-                <a href="/delete/${listitem.getdancid()}">Delete</a>
+                <a href="/deletedancer/${listitem.getdancid()}">Delete</a>
 
 
             </td>

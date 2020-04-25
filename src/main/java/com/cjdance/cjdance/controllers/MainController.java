@@ -107,6 +107,9 @@ public class MainController {
         return mv;
     }
 
+
+
+
     //Class CRUD
     @RequestMapping( value = "/editclass/{id}", method = RequestMethod.GET)
     public ModelAndView editClass(@PathVariable("id") String id){
@@ -145,33 +148,7 @@ public class MainController {
         return mv;
     }
 
-
-    /*
-    @RequestMapping(value = "/savedancer", method = RequestMethod.POST)
-    public ModelAndView save(@RequestParam("dance") String empid, @RequestParam("empfname") String empfname,
-                             @RequestParam("emplname") String emplname, @RequestParam("empphone") String empphone,
-                             @RequestParam("empemail") String empemail){
-        ModelAndView mv = new ModelAndView("/employee");
-        employee personToSave ;
-        if(!empid.isEmpty())
-        {
-            Optional<employee> users = emprepo.findById(empid);
-            personToSave = users.get();
-        }
-        else
-        {
-            personToSave = new employee();
-            personToSave.setempid(UUID.randomUUID().toString());
-        }
-        personToSave.setempfname(empfname);
-        personToSave.setemplname(emplname);
-        personToSave.setempphone(empphone);
-        personToSave.setempemail(empemail);
-        emprepo.save(personToSave);
-        mv.addObject("employeelist", emprepo.findAll());
-        return mv;
-    }
-*/
+    //Dancer CRUD
     @RequestMapping( value = "/editdancer/{id}", method = RequestMethod.GET)
     public ModelAndView editDancer(@PathVariable("id") String id){
         ModelAndView mv = new ModelAndView("/dancer");
@@ -181,13 +158,41 @@ public class MainController {
         return mv;
     }
 
+    @RequestMapping(value = "/savedancer", method = RequestMethod.POST)
+    public ModelAndView save(@RequestParam("dancid") String dancid, @RequestParam("dancfname") String dancfname,
+                             @RequestParam("danclname") String danclname, @RequestParam("dancdob") String dancdob,
+                             @RequestParam("dancphone") String dancphone,@RequestParam("dancemail") String dancemail){
+        ModelAndView mv = new ModelAndView("/dancer");
+        dancer personToSave ;
+        if(!dancid.isEmpty())
+        {
+            Optional<dancer> users = drepo.findById(dancid);
+            personToSave = users.get();
+        }
+        else
+        {
+            personToSave = new dancer();
+            personToSave.setdancid(UUID.randomUUID().toString());
+        }
+        personToSave.setdancfname(dancfname);
+        personToSave.setdanclname(danclname);
+        personToSave.setdancdob(dancdob);
+        personToSave.setdancemail(dancemail);
+        drepo.save(personToSave);
+        mv.addObject("dancerlist", drepo.findAll());
+        return mv;
+    }
+
+    @RequestMapping( value = "/deletedancer/{id}", method = RequestMethod.GET)
+    public ModelAndView deleteDancer(@PathVariable("id") String id){
+        ModelAndView mv = new ModelAndView("redirect:/dancer");
+        drepo.deleteById(id);
+        return mv;
+    }
+
+
+
+
 
 
 }
-/*
-{id}
-@PathVariable("id") String id
-Optional<employee> person = emprepo.findById(id);
-employee personToMap = person.get();
- mv.addObject("selectedItem", personToMap);
- */
