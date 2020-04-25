@@ -1,6 +1,7 @@
 package com.cjdance.cjdance.Models;
 
 import javax.persistence.*;
+import java.awt.*;
 
 
 @Entity
@@ -20,12 +21,15 @@ public class bill {
     @Column(name = "billpaid")
     private boolean billpaid;
 
-    @Column(name = "commentLikes")
-    private String commentLikes;
 
-    @ManyToOne
-    @JoinColumn(name="commentId")
-    private classinfo classinf;
+   /*
+
+    @OneToOne(mappedBy = "danceid")
+    private dancer dncr;
+
+   @ManyToOne
+    @JoinColumn(name="dancid")
+    private List<dancer> dncr;*/
 
     public bill(){
     }
@@ -88,4 +92,19 @@ public class bill {
     public void setbillpaid(boolean billpaid) {
         this.billpaid = billpaid;
     }
+/*
+    public dancer getDncr() {
+        return dncr;
+    }
+ */
+
+    public String getdancername(String id)
+    {
+        dancer dncr = new dancer();
+        String dancerstr = "";
+        dancerstr = dncr.getdancfname()+" "+dncr.getdanclname();
+        return dancerstr;
+    }
+
+
 }

@@ -1,9 +1,6 @@
 package com.cjdance.cjdance.Models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "dancer")
@@ -27,6 +24,8 @@ public class dancer {
     private String danczip;
     @Column(name = "dancstate")
     private String dancstate;
+    //@OneToMany(mappedBy = "dancid")
+
 
     public dancer(){
     }

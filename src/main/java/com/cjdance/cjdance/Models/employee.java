@@ -16,19 +16,16 @@ public class employee {
     private String empphone;
     @Column(name = "empemail")
     private String empemail;
-    @Column(name = "isinstructor")
-    private boolean isinstructor;
 
     public employee(){
     }
 
-    public employee(String empid, String empfname, String emplname, String empphone, String empemail, boolean isinstructor){
+    public employee(String empid, String empfname, String emplname, String empphone, String empemail){
         this.empid = empid;
         this.empfname = empfname;
         this.emplname = emplname;
         this.empphone = empphone;
         this.empemail = empemail;
-        this.isinstructor = isinstructor;
     }
 
     public String getempid() {
@@ -69,14 +66,6 @@ public class employee {
 
     public void setempemail(String empemail) {
         this.empemail = empemail;
-    }
-
-    public boolean getisinstructor() {
-        return isinstructor;
-    }
-
-    public void setisinstructor(boolean isinstructor) {
-        this.isinstructor = isinstructor;
     }
 
 }

@@ -89,7 +89,6 @@
         <th>Last Name</th>
         <th>Phone Number</th>
         <th>Email</th>
-        <th>Instructor</th>
     </tr>
     <c:forEach var = "listitem" items = "${employeelist}">
         <tr>
@@ -97,7 +96,6 @@
             <td>${listitem.getemplname()}</td>
             <td>${listitem.getempphone()}</td>
             <td>${listitem.getempemail()}</td>
-            <td>${listitem.getisinstructor()}</td>
         </tr>
     </c:forEach>
 </table>
