@@ -89,6 +89,7 @@
         <th>Last Name</th>
         <th>Phone Number</th>
         <th>Email</th>
+        <th>Action</th>
     </tr>
     <c:forEach var = "listitem" items = "${employeelist}">
         <tr>
@@ -96,6 +97,10 @@
             <td>${listitem.getemplname()}</td>
             <td>${listitem.getempphone()}</td>
             <td>${listitem.getempemail()}</td>
+            <td>
+                <a href="/editemployee/${listitem.getempid()}">Edit</a>
+
+            </td>
         </tr>
     </c:forEach>
 </table>
