@@ -86,6 +86,8 @@
         <th>Date of Birth</th>
         <th>Phone Number</th>
         <th>Email</th>
+        <th>Action</th>
+
     </tr>
     <c:forEach var = "listitem" items = "${dancerlist}">
         <tr>
@@ -94,6 +96,11 @@
             <td>${listitem.getdancdob()}</td>
             <td>${listitem.getdancphone()}</td>
             <td>${listitem.getdancemail()}</td>
+            <td>
+                <a href="/editdancer/${listitem.getdancid()}">Edit</a>
+
+            </td>
+
         </tr>
     </c:forEach>
 </table>

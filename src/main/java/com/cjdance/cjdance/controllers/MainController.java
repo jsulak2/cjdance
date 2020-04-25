@@ -64,21 +64,21 @@ public class MainController {
         ModelAndView mv = new ModelAndView("signup");
         //mv.addObject("signup", brepo.findAll());
 
-       return mv;
+        return mv;
     }
 
-    @RequestMapping( value = "/edit/{id}", method = RequestMethod.GET)
+    @RequestMapping( value = "/editemployee/{id}", method = RequestMethod.GET)
     public ModelAndView edit(@PathVariable("id") String id){
-        ModelAndView mv = new ModelAndView("edit");
+        ModelAndView mv = new ModelAndView("editemployee");
         Optional<employee> person = emprepo.findById(id);
         employee personToMap = person.get();
         mv.addObject("selectedItem", personToMap);
         return mv;
     }
 
-    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    @RequestMapping(value = "/saveemp/", method = RequestMethod.POST)
     public ModelAndView save(@RequestParam("empid") String empid, @RequestParam("empfname") String empfname, @RequestParam("emplname") String emplname){
-        ModelAndView mv = new ModelAndView("/");
+        ModelAndView mv = new ModelAndView("/employee/");
         employee personToSave ;
         if(!empid.isEmpty())
         {
