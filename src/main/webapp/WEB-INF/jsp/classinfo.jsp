@@ -93,8 +93,11 @@
             <td>${listitem.getclname()}</td>
             <td>${listitem.getclroom()}</td>
             <td>${listitem.getcldaytime()}</td>
-            <a href="/editclassinfo/${listitem.getclid()}">Edit</a>
-            <a href="/delete/${listitem.getclid()}">Delete</a>
+            <td>
+                <a href="/editclassinfo/${listitem.getclid()}">Edit</a>
+                <a href="/delete/${listitem.getclid()}">Delete</a>
+            </td>
+
 
 
         </tr>
