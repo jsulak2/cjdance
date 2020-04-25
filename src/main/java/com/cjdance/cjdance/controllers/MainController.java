@@ -128,50 +128,28 @@ public class MainController {
         mv.addObject("selectedItem", classToMap);
         return mv;
     }*/
-    @RequestMapping(value = "/saveclassinfo", method = RequestMethod.POST)
-    public ModelAndView saveClass(@RequestParam("clid") String clid, @RequestParam("clname") String clname,
-                             @RequestParam("clroom") String clroom, @RequestParam("cldaytime") String cldaytime){
-        ModelAndView mv = new ModelAndView("/classinfo");
-        classinfo classToSave ;
-        if(!clid.isEmpty())
-        {
-            Optional<classinfo> classes = crepo.findById(clid);
-            classToSave = classes.get();
-        }
-        else
-        {
-            classToSave = new classinfo();
-            classToSave.setclid(UUID.randomUUID().toString());
-        }
-        classToSave.setclname(clname);
-        classToSave.setclroom(clroom);
-        classToSave.setcldaytime(cldaytime);
-        crepo.save(classToSave);
-        mv.addObject("classlist", crepo.findAll());
-        return mv;
-    }
+
     @RequestMapping(value = "/saveclassinfo", method = RequestMethod.POST)
     public ModelAndView saveClass(@RequestParam("clid") String clid, @RequestParam("clname") String clname,
                                   @RequestParam("clroom") String clroom, @RequestParam("cldaytime") String cldaytime){
         ModelAndView mv = new ModelAndView("/classinfo");
         classinfo personToSave ;
-        if(!dancid.isEmpty())
+        if(!clid.isEmpty())
         {
-            Optional<dancer> users = drepo.findById(dancid);
+            Optional<classinfo> users = crepo.findById(clid);
             personToSave = users.get();
         }
         else
         {
-            personToSave = new dancer();
-            personToSave.setdancid(UUID.randomUUID().toString());
+            personToSave = new classinfo();
+            personToSave.setclid(UUID.randomUUID().toString());
         }
-        personToSave.setdancfname(dancfname);
-        personToSave.setdanclname(danclname);
-        personToSave.setdancphone(dancphone);
-        personToSave.setdancdob(dancdob);
-        personToSave.setdancemail(dancemail);
-        drepo.save(personToSave);
-        mv.addObject("dancerlist", drepo.findAll());
+        personToSave.setclname(clname);
+        personToSave.setclroom(clroom);
+        personToSave.setcldaytime(cldaytime);
+
+        crepo.save(personToSave);
+        mv.addObject("classlist", crepo.findAll());
         return mv;
     }
     @RequestMapping( value = "/deleteclass/{id}", method = RequestMethod.GET)
