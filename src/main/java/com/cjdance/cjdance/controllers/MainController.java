@@ -70,7 +70,7 @@ public class MainController {
     //Employee CRUD
     @RequestMapping( value = "/editemployee/{id}", method = RequestMethod.GET)
     public ModelAndView editEmployee(@PathVariable("id") String id){
-        ModelAndView mv = new ModelAndView("/editemployee");
+        ModelAndView mv = new ModelAndView("/employee");
         Optional<employee> person = emprepo.findById(id);
         employee personToMap = person.get();
         mv.addObject("selectedItem", personToMap);
@@ -80,7 +80,7 @@ public class MainController {
     public ModelAndView saveEmployee(@RequestParam("empid") String empid, @RequestParam("empfname") String empfname,
                              @RequestParam("emplname") String emplname, @RequestParam("empphone") String empphone,
                              @RequestParam("empemail") String empemail){
-        ModelAndView mv = new ModelAndView("/employee");
+        ModelAndView mv = new ModelAndView("redirect:/employee");
         employee personToSave ;
         if(!empid.isEmpty())
         {
