@@ -59,8 +59,8 @@ https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like
 <br><br>
 <button class="button" style="animation: alternate;" onclick="window.location.href = '/bill/';">Billing History</button>
 
-<!-- Testing functionality -->
-<br>
+
+<br><br>
 <button class="button" style="animation: alternate;" onclick="window.location.href = '/view/';">View Billing Data</button>
 
 </body>

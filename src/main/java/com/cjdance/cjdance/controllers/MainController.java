@@ -56,6 +56,9 @@ public class MainController {
     @RequestMapping( value = "/bill", method = RequestMethod.GET)
     public ModelAndView viewBill(){
         ModelAndView mv = new ModelAndView("bill");
+
+        serviceClass sc = new serviceClass();
+
         mv.addObject("billlist", brepo.findAll());
         return mv;
     }
