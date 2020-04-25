@@ -48,7 +48,7 @@
 <br>
 
 <hr/>
-<form method="post" action="/saveclass/">
+<form method="post" action="/classinfo">
     <input type="hidden" name="clid" value="${selectedItem.getclid()}">
     <br>Class Name:<br>
     <input type="text" name="clname" value="${selectedItem.getclname()}">
@@ -57,7 +57,7 @@
     <br>Day & Time:<br>
     <input type="text" name="cldaytime" value="${selectedItem.getcldaytime()}">
     <br><br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" style="background-color: darkseagreen">
 </form>
 <br>
 
