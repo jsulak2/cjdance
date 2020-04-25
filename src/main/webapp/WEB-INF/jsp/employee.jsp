@@ -116,6 +116,10 @@
     <input type="text" name="empfname" value="${selectedItem.getempfname()}">
     <br>Last name:<br>
     <input type="text" name="emplname" value="${selectedItem.getemplname()}">
+    <br>Phone:<br>
+    <input type="text" name="empphone" value="${selectedItem.getempphone()}">
+    <br>Email:<br>
+    <input type="text" name="empemail" value="${selectedItem.getempemail()}">
     <br><br>
     <input type="submit" value="Submit" style="background-color: darkseagreen">
 </form>
