@@ -59,7 +59,7 @@ public class bill {
     }
 
     public void setbillempid(String billempid) {
-        this.billclassid = billempid;
+        this.billempid = billempid;
     }
 
 
@@ -77,7 +77,7 @@ public class bill {
         return billdancerid;
     }
 
-    public void setbilldancerid(String billbilldancerid) {
+    public void setbilldancerid(String billdancerid) {
         this.billdancerid= billdancerid;
     }
 
