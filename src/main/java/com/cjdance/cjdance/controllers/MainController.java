@@ -80,7 +80,7 @@ public class MainController {
     public ModelAndView saveEmployee(@RequestParam("empid") String empid, @RequestParam("empfname") String empfname,
                              @RequestParam("emplname") String emplname, @RequestParam("empphone") String empphone,
                              @RequestParam("empemail") String empemail){
-        ModelAndView mv = new ModelAndView("redirect:/employee");
+        ModelAndView mv = new ModelAndView("/employee");
         employee personToSave ;
         if(!empid.isEmpty())
         {
@@ -162,7 +162,7 @@ public class MainController {
     //Dancer CRUD
     @RequestMapping( value = "/editdancer/{id}", method = RequestMethod.GET)
     public ModelAndView editDancer(@PathVariable("id") String id){
-        ModelAndView mv = new ModelAndView("/editdancer");
+        ModelAndView mv = new ModelAndView("/editDancer");
         Optional<dancer> person = drepo.findById(id);
         dancer personToMap = person.get();
         mv.addObject("selectedItem", personToMap);
