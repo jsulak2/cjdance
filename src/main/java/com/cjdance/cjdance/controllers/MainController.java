@@ -85,6 +85,7 @@ public class MainController {
         return mv;
     }
 
+
     @RequestMapping(value = "/saveemp/", method = RequestMethod.POST)
     public ModelAndView save(@RequestParam("empid") String empid, @RequestParam("empfname") String empfname, @RequestParam("emplname") String emplname){
         ModelAndView mv = new ModelAndView("/employee/");
