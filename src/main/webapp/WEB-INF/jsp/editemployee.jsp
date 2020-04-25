@@ -49,7 +49,7 @@
 
 
 <hr/>
-<form method="get" action="/saveemp/">
+<form method="post" action="/saveemp/">
     <input type="hidden" name="empid" value="${selectedItem.getempid()}">
     <br>First Name:<br>
     <input type="text" name="empfname" value="${selectedItem.getempfname()}">
