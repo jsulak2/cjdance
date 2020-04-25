@@ -83,34 +83,6 @@
 <h1>Billing</h1>
 <br>
 
-<table> <!--EMPLOYEE TABLE-->
-    <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Phone Number</th>
-        <th>Email</th>
-        <th>Action</th>
-    </tr>
-    <c:forEach var = "listitem" items = "${employeelist}">
-        <tr>
-            <td>${listitem.getempfname()}</td>
-            <td>${listitem.getemplname()}</td>
-            <td>${listitem.getempphone()}</td>
-            <td>${listitem.getempemail()}</td>
-            <td>
-                <a href="/editemployee/${listitem.getempid()}">Edit</a>
-                <a href="/deleteemp/${listitem.getempid()}">Delete</a>
-
-            </td>
-        </tr>
-    </c:forEach>
-</table>
-
-
-
-
-
-
 <form method="post" action="/savebillinfo/">
     <input type="hidden" name="billid">
     <br>Employee ID:<br>
@@ -128,24 +100,6 @@
 </form>
 <br>
 
-<table>
-    <tr>
-        <th>Employee Name</th>
-        <th>Class Name</th>
-        <th>Dancer Name</th>
-        <th>Bill Date</th>
-        <th>Total</th>
-    </tr>
-    <c:forEach var = "listitem" items = "${billlist}">
-        <tr>
-            <td>${listitem.getbillempid()}</td>
-            <td>${listitem.getbillclassid()}</td>
-            <td>${listitem.getbilldancerid()}</td>
-            <td>${listitem.getbilldate()}</td>
-            <td>${listitem.getbilltotal()}</td>
-        </tr>
-    </c:forEach>
-</table>
 <br>
 <button class="button" style="animation: alternate;" onclick="window.location.href = '/';">Cancel</button>
 </body>
