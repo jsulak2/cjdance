@@ -99,7 +99,7 @@
             <td>${listitem.getempemail()}</td>
             <td>
                 <a href="/editemployee/${listitem.getempid()}">Edit</a>
-                <a href="/delete/${listitem.getempid()}">Delete</a>
+                <a href="/deleteemp/${listitem.getempid()}">Delete</a>
 
             </td>
         </tr>

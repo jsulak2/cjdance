@@ -19,6 +19,7 @@
         }
         form {
             color: aliceblue;
+            margin-left: 30px;
         }
 
         .button {

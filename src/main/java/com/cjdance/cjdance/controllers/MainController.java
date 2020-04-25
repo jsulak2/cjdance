@@ -107,11 +107,19 @@ public class MainController {
     }
 
     @RequestMapping( value = "/deleteemp/{id}", method = RequestMethod.GET)
-    public ModelAndView delete(@PathVariable("id") String id){
+    public ModelAndView deleteEmployee(@PathVariable("id") String id){
         ModelAndView mv = new ModelAndView("redirect:/");
         emprepo.deleteById(id);
         return mv;
     }
+
+    @RequestMapping( value = "/deleteclass/{id}", method = RequestMethod.GET)
+    public ModelAndView deleteClass(@PathVariable("id") String id){
+        ModelAndView mv = new ModelAndView("redirect:/classinfo/");
+        crepo.deleteById(id);
+        return mv;
+    }
+
 
 }
 /*

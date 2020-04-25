@@ -17,6 +17,11 @@
             padding: 8px 8px 8px 25px;
             alignment: left;
         }
+        form {
+            color: aliceblue;
+            margin-left: 30px;
+        }
+
         .button {
             margin-left: 30px;
             text-align: center;
