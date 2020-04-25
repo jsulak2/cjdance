@@ -119,6 +119,7 @@ public class MainController {
         mv.addObject("selectedItem", personToMap);
         return mv;
     }
+
     /*@RequestMapping( value = "/editclass/{id}", method = RequestMethod.GET)
     public ModelAndView editClass(@PathVariable("id") String id){
         ModelAndView mv = new ModelAndView("/editclass");
@@ -127,10 +128,10 @@ public class MainController {
         mv.addObject("selectedItem", classToMap);
         return mv;
     }*/
-    @RequestMapping(value = "/saveclass", method = RequestMethod.POST)
+    @RequestMapping(value = "/saveclassinfo", method = RequestMethod.POST)
     public ModelAndView saveClass(@RequestParam("clid") String clid, @RequestParam("clname") String clname,
                              @RequestParam("clroom") String clroom, @RequestParam("cldaytime") String cldaytime){
-        ModelAndView mv = new ModelAndView("/editclass");
+        ModelAndView mv = new ModelAndView("/classinfo");
         classinfo classToSave ;
         if(!clid.isEmpty())
         {
@@ -147,6 +148,30 @@ public class MainController {
         classToSave.setcldaytime(cldaytime);
         crepo.save(classToSave);
         mv.addObject("classlist", crepo.findAll());
+        return mv;
+    }
+    @RequestMapping(value = "/saveclassinfo", method = RequestMethod.POST)
+    public ModelAndView saveClass(@RequestParam("clid") String clid, @RequestParam("clname") String clname,
+                                  @RequestParam("clroom") String clroom, @RequestParam("cldaytime") String cldaytime){
+        ModelAndView mv = new ModelAndView("/classinfo");
+        classinfo personToSave ;
+        if(!dancid.isEmpty())
+        {
+            Optional<dancer> users = drepo.findById(dancid);
+            personToSave = users.get();
+        }
+        else
+        {
+            personToSave = new dancer();
+            personToSave.setdancid(UUID.randomUUID().toString());
+        }
+        personToSave.setdancfname(dancfname);
+        personToSave.setdanclname(danclname);
+        personToSave.setdancphone(dancphone);
+        personToSave.setdancdob(dancdob);
+        personToSave.setdancemail(dancemail);
+        drepo.save(personToSave);
+        mv.addObject("dancerlist", drepo.findAll());
         return mv;
     }
     @RequestMapping( value = "/deleteclass/{id}", method = RequestMethod.GET)

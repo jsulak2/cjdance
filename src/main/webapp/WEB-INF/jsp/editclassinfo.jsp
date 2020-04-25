@@ -48,7 +48,7 @@
 <br>
 
 <hr/>
-<form method="post" action="/classinfo">
+<form method="post" action="/saveclassinfo">
     <input type="hidden" name="clid" value="${selectedItem.getclid()}">
     <br>Class Name:<br>
     <input type="text" name="clname" value="${selectedItem.getclname()}">
