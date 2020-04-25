@@ -77,7 +77,7 @@ public class MainController {
         return mv;
     }
     @RequestMapping(value = "/saveemp", method = RequestMethod.POST)
-    public ModelAndView save(@RequestParam("empid") String empid, @RequestParam("empfname") String empfname,
+    public ModelAndView saveEmployee(@RequestParam("empid") String empid, @RequestParam("empfname") String empfname,
                              @RequestParam("emplname") String emplname, @RequestParam("empphone") String empphone,
                              @RequestParam("empemail") String empemail){
         ModelAndView mv = new ModelAndView("/employee");
@@ -116,8 +116,8 @@ public class MainController {
         mv.addObject("selectedItem", classToMap);
         return mv;
     }
-    @RequestMapping(value = "/editclass", method = RequestMethod.POST)
-    public ModelAndView save(@RequestParam("clid") String clid, @RequestParam("clname") String clname,
+    @RequestMapping(value = "/saveclass", method = RequestMethod.POST)
+    public ModelAndView saveClass(@RequestParam("clid") String clid, @RequestParam("clname") String clname,
                              @RequestParam("clroom") String clroom, @RequestParam("cldaytime") String cldaytime){
         ModelAndView mv = new ModelAndView("/editclass");
         classinfo classToSave ;
