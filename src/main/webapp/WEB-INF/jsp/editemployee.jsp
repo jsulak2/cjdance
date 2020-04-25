@@ -17,6 +17,10 @@
             padding: 8px 8px 8px 25px;
             alignment: left;
         }
+        form {
+            color: aliceblue;
+        }
+
         .button {
             margin-left: 30px;
             text-align: center;
@@ -50,7 +54,7 @@
     <br>Last name:<br>
     <input type="text" name="emplname" value="${selectedItem.getemplname()}">
     <br><br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" style="background-color: darkseagreen">
 </form>
 <br>
 

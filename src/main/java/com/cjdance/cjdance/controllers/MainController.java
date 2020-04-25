@@ -76,16 +76,6 @@ public class MainController {
         return mv;
     }
 
-    @RequestMapping( value = "/editdancer/{id}", method = RequestMethod.GET)
-    public ModelAndView editDancer(@PathVariable("id") String id){
-        ModelAndView mv = new ModelAndView("editdancer");
-        Optional<dancer> person = drepo.findById(id);
-        dancer personToMap = person.get();
-        mv.addObject("selectedItem", personToMap);
-        return mv;
-    }
-
-
     @RequestMapping(value = "/saveemp/", method = RequestMethod.POST)
     public ModelAndView save(@RequestParam("empid") String empid, @RequestParam("empfname") String empfname, @RequestParam("emplname") String emplname){
         ModelAndView mv = new ModelAndView("/employee/");
@@ -104,6 +94,22 @@ public class MainController {
         personToSave.setemplname(emplname);
         emprepo.save(personToSave);
         mv.addObject("employeelist", emprepo.findAll());
+        return mv;
+    }
+
+    @RequestMapping( value = "/editdancer/{id}", method = RequestMethod.GET)
+    public ModelAndView editDancer(@PathVariable("id") String id){
+        ModelAndView mv = new ModelAndView("editdancer");
+        Optional<dancer> person = drepo.findById(id);
+        dancer personToMap = person.get();
+        mv.addObject("selectedItem", personToMap);
+        return mv;
+    }
+
+    @RequestMapping( value = "/deleteemp/{id}", method = RequestMethod.GET)
+    public ModelAndView delete(@PathVariable("id") String id){
+        ModelAndView mv = new ModelAndView("redirect:/");
+        emprepo.deleteById(id);
         return mv;
     }
 
