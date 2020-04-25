@@ -10,16 +10,16 @@ public class bill {
     @Id
     @Column(name = "billid")
     private String billid;
-    @Column(name = "billdancer")
-    private String billdancer;
+    @Column(name = "billempid")
+    private String billempid;
+    @Column(name = "billclassid")
+    private String billclassid;
+    @Column(name = "billdancerid")
+    private String billdancerid;
     @Column(name = "billdate")
     private String billdate;
-    @Column(name = "billnumclasses")
-    private String billnumclasses;
     @Column(name = "billtotal")
     private String billtotal;
-    @Column(name = "billpaid")
-    private boolean billpaid;
 
 
    /*
@@ -34,14 +34,14 @@ public class bill {
     public bill(){
     }
 
-    public bill(String billid, String billdancer, String billdate, String billnumclasses,
-                String billtotal, boolean billpaid){
+    public bill(String billid, String billempid, String billclassid, String billdancerid,
+                String billdate, String billtotal){
         this.billid = billid;
-        this.billdancer = billdancer;
+        this.billempid = billempid;
+        this.billclassid = billclassid;
+        this.billdancerid = billdancerid;
         this.billdate = billdate;
-        this.billnumclasses = billnumclasses;
         this.billtotal = billtotal;
-        this.billpaid = billpaid;
     }
 
     public String getbillid() {
@@ -52,12 +52,30 @@ public class bill {
         this.billid = billid;
     }
 
-    public String getbilldancer() {
-        return billdancer;
+    public String getbillempid() {
+        return billempid;
     }
 
-    public void setbilldancer(String billdancer) {
-        this.billdancer = billdancer;
+    public void setbillempid(String billempid) {
+        this.billclassid = billempid;
+    }
+
+
+    public String getbillclassid() {
+        return billclassid;
+    }
+
+    public void setbillclassid(String billclassid) {
+        this.billclassid = billclassid;
+    }
+
+
+    public String getbilldancerid() {
+        return billdancerid;
+    }
+
+    public void setbilldancerid(String billbilldancerid) {
+        this.billdancerid= billdancerid;
     }
 
     public String getbilldate() {
@@ -65,15 +83,7 @@ public class bill {
     }
 
     public void setbilldate(String billdate) {
-        this.billdate= billdate;
-    }
-
-    public String getbillnumclasses() {
-        return billnumclasses;
-    }
-
-    public void setbillnumclasses(String billnumclasses) {
-        this.billnumclasses = billnumclasses;
+        this.billdate = billdate;
     }
 
     public String getbilltotal() {
@@ -85,13 +95,7 @@ public class bill {
     }
 
 
-    public boolean getbillpaid() {
-        return billpaid;
-    }
 
-    public void setbillpaid(boolean billpaid) {
-        this.billpaid = billpaid;
-    }
 /*
     public dancer getDncr() {
         return dncr;
